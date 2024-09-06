@@ -23,7 +23,7 @@ class CityDropdown extends StatelessWidget {
           borderRadius: BorderRadius.circular(13.0),
           border: Border.all(color: Colors.blueAccent, width: 1.0),
         ),
-        height: 50, // Reduced the height of the container
+        height: 50,
         child: DropdownButtonHideUnderline(
           child: DropdownButton<City>(
             value: selectedCity,
@@ -48,7 +48,7 @@ class CityDropdown extends StatelessWidget {
                 child: Text(
                   city.name,
                   style: const TextStyle(
-                    fontSize: 16, // Reduced font size for dropdown items
+                    fontSize: 16, 
                     color: Colors.blueAccent,
                   ),
                 ),

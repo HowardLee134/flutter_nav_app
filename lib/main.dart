@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
     City(name: 'Singapore', coordinates: const LatLng(1.3521, 103.8198)),
   ];
 
-  // Transportation speeds (in km/h)
+  // Transportation speeds 
   final Map<int, double> _speeds = {
     0: 15,  // Bike speed
     1: 5,   // Walk speed
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
     3: 800, // Fly speed
   };
 
-  // Selected city and mode
+  // city and mode
   City? _selectedCity;
   int _selectedMode = 2; // Default mode: Drive
   double? _distanceInKm;

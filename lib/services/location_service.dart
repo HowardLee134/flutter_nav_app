@@ -3,7 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:math';
 
 class LocationService {
-  // Method to get the current location as a LatLng
+  // get the current location as a LatLng
   Future<LatLng> getCurrentPosition() async {
     Position position = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high,
@@ -11,7 +11,7 @@ class LocationService {
     return LatLng(position.latitude, position.longitude);
   }
 
-  // Method to calculate distance using LatLng values (Haversine formula)
+  // calculate distance using LatLng values (Haversine formula)
   double calculateDistance(LatLng start, LatLng end) {
     const double earthRadius = 6371; // Radius of the Earth in km
 
@@ -27,7 +27,7 @@ class LocationService {
     return earthRadius * c; // Distance in kilometers
   }
 
-  // Method to calculate distance between two Position objects (in meters)
+  // calculate distance between two Position objects (in meters)
   double calculateDistanceBetweenPositions(Position start, Position end) {
     return Geolocator.distanceBetween(
       start.latitude,
@@ -37,12 +37,12 @@ class LocationService {
     );
   }
 
-  // Helper method to convert degrees to radians
+  // Helper convert degrees to radians
   double _degreesToRadians(double degrees) {
     return degrees * pi / 180;
   }
 
-  // Method to check location services and permissions
+  // check location services and permissions
   Future<Position> getCurrentLocationWithPermissions() async {
     bool serviceEnabled;
     LocationPermission permission;
